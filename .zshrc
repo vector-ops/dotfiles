@@ -41,7 +41,7 @@ export NVM_DIR="$HOME/.nvm"
 alias fz='fzf --preview "bat --style=header --color=always --line-range :50 {}" --preview-window=right:60% | xargs open'
 alias cd=z
 alias zource="source ~/.zshrc"
-alias zshrc="nvim ~/.zshrc"
+alias zshrc="hx ~/.zshrc"
 alias ghostty="nvim ~/.config/ghostty/config"
 alias lg=lazygit
 alias zombies="ps ax -o pid,ppid,user,cmd,state,%cpu,%mem | awk '/ Z |PID/&&!/awk/ {print}'"
