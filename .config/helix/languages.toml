@@ -1,0 +1,14 @@
+[[language]]
+name = "go"
+auto-format = true
+formatter = { command = "goimports" }
+language-servers = ["gopls"]
+roots = ["go.mod", "go.work"]
+
+[language-server.gopls]
+command = "gopls"
+
+[language-server.gopls.config]
+gofumpt = true
+staticcheck = true
+analyses = { unusedparams = true, unreachable = true }
