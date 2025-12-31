@@ -1,5 +1,4 @@
-theme = "gruber-darker"
-
+theme = "gruber-darker-custom"
 
 
 
@@ -16,21 +15,26 @@ bufferline = "multiple"
 # auto-save = true
 idle-timeout = 0
 # rulers = [100]
-color-modes = false
+color-modes = true
 true-color = true
+auto-format = true
+completion-replace = true
+auto-info = true
+popup-border = "all"
+end-of-line-diagnostics = "hint"
 
 [editor.statusline]
-
 right = ["diagnostics", "position", "position-percentage", "file-encoding", "file-type"]
+
 # version-control
 [editor.lsp]
 display-messages = true
 display-inlay-hints = true
 
 [editor.cursor-shape]
-insert = "bar"
+insert = "block"
 normal = "block"
-select = "underline"
+select = "block"
 
 [editor.file-picker]
 hidden = false
@@ -38,14 +42,18 @@ hidden = false
 [editor.soft-wrap]
 enable = true
 
+# try it out for a few days and disable if you don't like it
+# its the lines to the left line numbers for git or dots for diagnostics etc
+[editor.gutters]
+layout = ["diff", "diagnostics", "line-numbers", "spacer"]
+
+# [editor.inline-diagnostics]
+# cursor-line = "error"
 
 
 #
 # NORMAL MODE
 # 
-
-
-
 
 [keys.normal]
 "C-d" = ["half_page_down", "goto_window_center"]
@@ -80,7 +88,6 @@ A-down =  ["extend_to_line_bounds", "delete_selection", "paste_after"]
 F5 = ":config-reload"
 
 
-
 C-right = "move_next_word_start"
 C-left = "move_prev_word_end"
 # C-up = "move_line_up"
@@ -96,6 +103,7 @@ C-j = ["move_line_down", "scroll_down"]
 
 # Duplicate current line
 "C-A-down" = ["extend_to_line_bounds", "yank", "paste_after"]
+
 
 [keys.normal."="]
 "("= "rotate_selection_contents_backward"
@@ -117,11 +125,10 @@ e = [
  ":set mouse true",
 ]
 
+
 #
 # INSERT MODE
 # 
-
-
 
 [keys.insert]
 up = "move_line_up"
@@ -138,6 +145,8 @@ C-left = "move_prev_word_end"
 C-up = "move_line_up"
 C-down = "move_line_down"
 
+[keys.insert.j]
+k = "normal_mode" # Maps `jk` to exit insert mode
 
 #
 # SELECT MODE
