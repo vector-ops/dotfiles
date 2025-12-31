@@ -1,9 +1,5 @@
-[[language]]
-name = "go"
-auto-format = true
-formatter = { command = "goimports" }
-language-servers = ["gopls"]
-roots = ["go.mod", "go.work"]
+[language-server.uwu_colors]
+command = "uwu_colors"
 
 [language-server.gopls]
 command = "gopls"
@@ -12,3 +8,23 @@ command = "gopls"
 gofumpt = true
 staticcheck = true
 analyses = { unusedparams = true, unreachable = true }
+
+[[language]]
+name = "go"
+auto-format = true
+formatter = { command = "goimports" }
+language-servers = ["gopls"]
+roots = ["go.mod", "go.work"]
+
+[[language]]
+name = "toml"
+auto-format = true
+# formatter = { command = "goimports" }
+language-servers = ["uwu_colors"]
+# roots = ["go.mod", "go.work"]
+
+[[language]]
+name = "__common__"
+scope = "source.__common__"
+file-types = []
+language-servers = [ "uwu_colors" ]
