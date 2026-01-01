@@ -25,6 +25,11 @@ end-of-line-diagnostics = "hint"
 
 [editor.statusline]
 right = ["diagnostics", "position", "position-percentage", "file-encoding", "file-type"]
+left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
+center = ["version-control"]
+
+# [editor.statusline.version-control]
+# format = ""
 
 # version-control
 [editor.lsp]
