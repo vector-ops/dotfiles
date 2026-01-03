@@ -21,7 +21,8 @@ auto-format = true
 completion-replace = true
 auto-info = true
 popup-border = "all"
-end-of-line-diagnostics = "hint"
+# shell = ["zsh"]
+# end-of-line-diagnostics = "hint"
 
 [editor.statusline]
 right = ["diagnostics", "position", "position-percentage", "file-encoding", "file-type"]
@@ -37,7 +38,7 @@ display-messages = true
 display-inlay-hints = true
 
 [editor.cursor-shape]
-insert = "block"
+insert = "bar"
 normal = "block"
 select = "block"
 
