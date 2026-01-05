@@ -4,6 +4,21 @@
 # functions, options, key bindings, etc.
 #
 
+# Detect OS and load corresponding zsh config from $HOME/.zsh
+case "$(uname)" in
+  Linux)
+  	OS_NAME="linux"
+		;;
+	Darwin)
+		OS_NAME="macos"
+		;;
+esac
+
+OS_FILE="$HOME/.zsh/os-${OS_NAME}.zsh"
+[ -r "$OS_FILE" ] && source "$OS_FILE"
+
+
+
 # variables
 #
 #
@@ -14,9 +29,14 @@
 #
 export EDITOR=hx
 
-# go binaries
-#export PATH=$PATH:/usr/local/go/bin
+# go exports
 export PATH=$PATH:$HOME/go/bin
+
+# odin-lang exports
+export PATH=$PATH:$HOME/odin
+
+# nim-lang exports
+export PATH=$HOME/.nimble/bin:$PATH
 
 # neovim
 #export PATH="$PATH:/opt/nvim-linux64/bin"
@@ -27,6 +47,7 @@ export PATH=$PATH:$HOME/go/bin
 # local/bin
 export PATH=$PATH:$HOME/.local/bin
 
+
 # exports end
 
 
@@ -35,15 +56,13 @@ alias fz='fzf --preview "bat --style=header --color=always --line-range :50 {}" 
 alias cd=z
 alias zource="source ~/.zshrc"
 alias zshrc="hx ~/.zshrc"
-alias ghostty="nvim ~/.config/ghostty/config"
+alias ghostty="hx ~/.config/ghostty/config"
 alias lg=lazygit
 alias zombies="ps ax -o pid,ppid,user,cmd,state,%cpu,%mem | awk '/ Z |PID/&&!/awk/ {print}'"
 alias ls="eza --long --group-directories-first --color=always --icons=always --no-user"
 alias grep="rg --color=auto"
 alias golint=golangci-lint
 alias lzd='lazydocker'
-
-
 
 # bat aliases
 alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
@@ -66,8 +85,12 @@ alias gi="git init"
 alias gcl="git clone"
 alias gsw="git switch"
 
+# docker
+alias dcu="docker compose up"
+alias dcud="docker compose up -d"
 
-# Work aliases
+# Work
+# ssh aliases
 alias products-ssh="ssh -i ~/Documents/YourToken/privatekeys/product-server-key.pem azureuser@20.244.82.114"
 
 #aliases end
@@ -82,6 +105,7 @@ setopt COMPLETE_IN_WORD
 # Ultramarine ZSH config
 # initialize starship
 eval "$(starship init zsh)"
+
 
 # Ctrl + Arrow keybindings
 bindkey "^[[1;5D" backward-word
@@ -144,3 +168,4 @@ function y() {
 
 # remove duplicates from path
 PATH=$(printf "%s" "$PATH" | awk -v RS=':' '!a[$1]++ { if (NR > 1) printf RS; printf $1 }')
+

@@ -8,20 +8,20 @@
 "punctuation" = "fg0"
 "punctuation.delimiter" = "fg0"
 "operator" = "fg0"
-"special" = { fg = "yellow0", modifiers = ["bold"] }
+# "special" = { fg = "yellow0", modifiers = ["bold"] }
 "variable" = "fg0"
-"variable.builtin" = {  fg = "yellow0", modifiers = ["bold"] }
-"variable.parameter" = "fg0"
+# "variable.builtin" = {  fg = "yellow0", modifiers = ["bold"] }
+# "variable.parameter" = "fg0"
 "type" = "quartz"
-"type.builtin" = "yellow0"
-"constructor" = { fg = "quartz" }
-"function" = "niagara0"
+# "type.builtin" = "yellow0"
+# "constructor" = { fg = "quartz" }
+# "function" = "niagara0"
 "function.builtin" = "yellow0"
 "tag" = "niagara0"
 "comment" = { fg = "brown0" }
 "constant.character" = { fg = "green0" }
-"constant.character.escape" = { fg = "yellow0" }
-"constant.builtin" = { fg = "yellow0", modifiers = ["bold"] }
+# "constant.character.escape" = { fg = "yellow0" }
+# "constant.builtin" = { fg = "yellow0", modifiers = ["bold"] }
 "string" = "green0"
 "constant.numeric" = "wisteria"
 "label" = "fg0"
@@ -39,7 +39,7 @@
 "ui.background" = { bg = "bg0" }
 "ui.linenr" = { fg = "bg4" }
 "ui.linenr.selected" = { fg = "yellow0" }
-"ui.cursorline" = { bg = "bg1" }
+# "ui.cursorline" = { bg = "bg1" }
 
 "ui.statusline" = { fg = "fg0", bg = "bg1" }
 "ui.statusline.normal" = { fg = "bg1", bg = "yellow0", modifiers = ["bold"] }
@@ -63,7 +63,7 @@
 "ui.menu" = { fg = "fg0", bg = "bg6" }
 "ui.menu.selected" = { fg = "fg0", bg = "bg5", modifiers = ["bold"] }
 "ui.cursor.primary.normal" = { fg="bg0",bg ="yellow0", modifiers = ["bold"]}
-"ui.cursor.primary.insert" = { fg="bg0",bg ="white", modifiers = ["bold"]}
+"ui.cursor.primary.insert" = { fg="white",bg ="white", modifiers = ["bold"]}
 "ui.cursor.primary.select" = { fg="bg0",bg ="wisteria", modifiers = ["bold"]}
 
 
