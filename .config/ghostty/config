@@ -1,9 +1,9 @@
 theme = catpuccin-mocha.conf
 
 #font-family = BerkeleyMono Nerd Font
-#font-family = Iosevka Nerd Font
+font-family = Iosevka Nerd Font
 # font-family = SFMono Nerd Font
-font-size = 12
+font-size = 13
 #theme = GruvboxDarkHard
 shell-integration-features = no-cursor,sudo,no-title
 cursor-style = block
