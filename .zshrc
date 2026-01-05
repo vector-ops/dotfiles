@@ -27,13 +27,6 @@ export PATH=$PATH:$HOME/go/bin
 # local/bin
 export PATH=$PATH:$HOME/.local/bin
 
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
-
-
 # exports end
 
 
@@ -50,10 +43,7 @@ alias grep="rg --color=auto"
 alias golint=golangci-lint
 alias lzd='lazydocker'
 
-# package installer aliases
-alias gimme='brew install'
-alias hab="brew search"
-alias lowdiff="brew uninstall"
+
 
 # bat aliases
 alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
@@ -92,9 +82,6 @@ setopt COMPLETE_IN_WORD
 # Ultramarine ZSH config
 # initialize starship
 eval "$(starship init zsh)"
-
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Ctrl + Arrow keybindings
 bindkey "^[[1;5D" backward-word
