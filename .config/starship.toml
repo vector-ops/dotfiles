@@ -8,21 +8,42 @@ $git_branch\
 $git_state\
 $git_status\
 $cmd_duration\
-$line_break\
+$c\
+$elixir\
+$elm\
+$golang\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+$scala\
+$conda\
 $python\
+$python\
+$line_break\
 $character"""
 
 [directory]
 style = "blue"
 
+[directory.substitutions]
+Documents = "󰈙"
+Downloads = " "
+Music = " "
+Pictures = " "
+
+
 [character]
-success_symbol = "[❯](purple)"
+success_symbol = "[❯](yellow)"
 error_symbol = "[❯](red)"
 vimcmd_symbol = "[❮](green)"
 
 [git_branch]
-format = "[$branch]($style)"
+format = '[[ $symbol $branch ](fg:blue bg:overlay)]($style)'
 style = "bright-black"
+symbol = ""
 
 [git_status]
 format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
@@ -34,6 +55,19 @@ staged = "​"
 renamed = "​"
 deleted = "​"
 stashed = "≡"
+# disabled = false
+# style = "bg:overlay fg:red"
+# format = '(fg:overlay)([$all_status$ahead_behind]($style))(fg:overlay) '
+# up_to_date = '[✓ ](bg:overlay fg:iris)'
+# untracked = '[?\($count\)](bg:overlay fg:gold)'
+# stashed = '[\$](bg:overlay fg:iris)'
+# modified = '[!\($count\)](bg:overlay fg:gold)'
+# renamed = '[»\($count\)](bg:overlay fg:iris)'
+# deleted = '[✘\($count\)](style)'
+# staged = '[++\($count\)](bg:overlay fg:gold)'
+# ahead = '[⇡\(${count}\)](bg:overlay fg:foam)'
+# diverged = '⇕[\[](bg:overlay fg:iris)[⇡\(${ahead_count}\)](bg:overlay fg:foam)[⇣\(${behind_count}\)](bg:overlay fg:rose)[\]](bg:overlay fg:iris)'
+# behind = '[⇣\(${count}\)](bg:overlay fg:rose)'
 
 [git_state]
 format = '\([$state( $progress_current/$progress_total)]($style)\) '
@@ -43,8 +77,52 @@ style = "bright-black"
 format = "[$duration]($style) "
 style = "yellow"
 
+[nodejs]
+symbol = ""
+style = "bg:overlay"
+format = '[[ $symbol( $version) ](fg:green bg:overlay)]($style)'
+
+[c]
+symbol = " "
+style = "bg:overlay"
+format = '[[ $symbol( $version) ](fg:blue bg:overlay)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:overlay"
+format = '[[ $symbol( $version) ](fg:orange bg:overlay)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:overlay"
+format = '[[ $symbol(  $version) ](fg:blue bg:overlay)]($style)'
+
+[php]
+symbol = ""
+style = "bg:overlay"
+format = '[[ $symbol( $version) ](fg:purple bg:overlay)]($style)'
+
+[java]
+symbol = " "
+style = "bg:overlay"
+format = '[[ $symbol( $version) ](fg:blue bg:overlay)]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:overlay"
+format = '[[ $symbol( $version) ](fg:purple bg:overlay)]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:overlay"
+format = '[[ $symbol( $version) ](fg:cyan bg:overlay)]($style)'
+
 [python]
-format = "[$virtualenv]($style) "
-style = "bright-black"
-detect_extensions = []
-detect_files = []
+symbol = ""
+style = "bg:overlay"
+format = '[[ $symbol( $version) ](fg:yellow bg:overlay)]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:overlay"
+format = '[[ $symbol( $context) ](fg:#83a598 bg:overlay)]($style)'
