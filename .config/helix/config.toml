@@ -101,8 +101,8 @@ C-left = "move_prev_word_end"
 
 
 # Scroll
-C-up = ["move_line_up", "scroll_up"]
-C-down = ["move_line_down", "scroll_down"]
+C-up = [ "scroll_up"]
+C-down = [ "scroll_down"]
 C-k = ["move_line_up", "scroll_up"]
 C-j = ["move_line_down", "scroll_down"]
 

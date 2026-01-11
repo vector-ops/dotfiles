@@ -63,6 +63,7 @@ alias ls="eza --long --group-directories-first --color=always --icons=always --n
 alias grep="rg --color=auto"
 alias golint=golangci-lint
 alias lzd='lazydocker'
+alias cohx='hx $HOME/.config/helix'
 
 # bat aliases
 alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
@@ -88,6 +89,7 @@ alias gsw="git switch"
 # docker
 alias dcu="docker compose up"
 alias dcud="docker compose up -d"
+alias dcd="docker compose down"
 
 # Work
 # ssh aliases

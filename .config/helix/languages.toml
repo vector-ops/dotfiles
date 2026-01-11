@@ -8,6 +8,25 @@ command = "gopls"
 gofumpt = true
 staticcheck = true
 analyses = { unusedparams = true, unreachable = true }
+hints = { assignVariableTypes = true, compositeLiteralFields = true, constantValues = true, functionTypeParameters = true, parameterNames = true, rangeVariableTypes = true, ignoredError = false }
+
+
+# [language-server.gopls.inlayHints]
+# assignVariableTypes = true
+# compositeLiteralFields = true
+# constantValues = true
+# functionTypeParameters = true
+# parameterNames = true
+# rangeVariableTypes = true
+# ignoredError = true
+# inlayHints.assignVariableTypes = true
+# inlayHints.compositeLiteralFields = true
+# inlayHints.constantValues = true
+# inlayHints.functionTypeParameters = true
+# inlayHints.parameterNames = true
+# inlayHints.rangeVariableTypes = true
+# inlayHints.ignoredError = true
+
 
 [[language]]
 name = "go"
@@ -36,3 +55,11 @@ name = "__common__"
 scope = "source.__common__"
 file-types = []
 language-servers = [ "uwu_colors" ]
+
+[[language]]
+name = "svg"
+scope = ""
+roots = []
+file-types = ["svg"]
+formatter= { command = "svgo", args = ["--pretty", "-"] }
+
