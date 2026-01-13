@@ -132,6 +132,10 @@ e = [
 ]
 
 
+# close buffer
+"x" = ":buffer-close"
+
+
 #
 # INSERT MODE
 # 
