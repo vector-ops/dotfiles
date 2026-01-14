@@ -1,14 +1,14 @@
-theme = catpuccin-mocha.conf
+theme = kanagawa-dragon.conf
 
 #font-family = BerkeleyMono Nerd Font
 font-family = Iosevka Nerd Font
 # font-family = SFMono Nerd Font
-font-size = 13
+font-size = 14
 #theme = GruvboxDarkHard
 shell-integration-features = no-cursor,sudo,no-title
 cursor-style = block
 adjust-cell-height = 35%
-background-opacity = 0.95
+# background-opacity = 0.95
 
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 2
@@ -19,7 +19,7 @@ macos-titlebar-style=transparent
 window-colorspace = "display-p3"
 window-height = 20
 window-width = 80
-background = 1C2021
+# background = 1C2021
 # foreground = d4be98
 
 # keybindings
