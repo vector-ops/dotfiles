@@ -56,7 +56,7 @@ alias fz='fzf --preview "bat --style=header --color=always --line-range :50 {}" 
 alias cd=z
 alias zource="source ~/.zshrc"
 alias zshrc="hx ~/.zshrc"
-alias ghostty="hx ~/.config/ghostty/config"
+# alias ghostty="hx ~/.config/ghostty/config"
 alias lg=lazygit
 alias zombies="ps ax -o pid,ppid,user,cmd,state,%cpu,%mem | awk '/ Z |PID/&&!/awk/ {print}'"
 alias ls="eza --long --group-directories-first --color=always --icons=always --no-user"
