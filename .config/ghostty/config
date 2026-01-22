@@ -1,26 +1,25 @@
 theme = kanagawa-dragon.conf
 
-#font-family = BerkeleyMono Nerd Font
+# default shell
+command = zsh
+
 font-family = Iosevka Nerd Font
-# font-family = SFMono Nerd Font
-font-size = 14
-#theme = GruvboxDarkHard
+font-size = 12
 shell-integration-features = no-cursor,sudo,no-title
 cursor-style = block
-adjust-cell-height = 35%
-# background-opacity = 0.95
+adjust-cell-height = 10%
 
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 2
 
+working-directory = home
+window-inherit-working-directory = false
 window-padding-balance = true
-window-save-state = always
+window-save-state = never
 macos-titlebar-style=transparent
 window-colorspace = "display-p3"
 window-height = 20
-window-width = 80
-# background = 1C2021
-# foreground = d4be98
+window-width = 100
 
 # keybindings
 keybind = ctrl+s>r=reload_config
