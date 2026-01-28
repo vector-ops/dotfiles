@@ -15,3 +15,4 @@ export NVM_DIR="$HOME/.nvm"
 alias gimme='sudo dnf install -y'
 alias hab="sudo dnf search"
 alias lowdiff="sudo dnf remove -y"
+alias task=go-task
