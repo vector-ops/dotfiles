@@ -18,3 +18,5 @@ curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+
+mkdir Probe Work Dev
