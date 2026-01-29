@@ -30,6 +30,64 @@ formatter = { command = "clang-format" }
 language-servers = ["clangd"]
 
 [[language]]
+name = "typescript"
+language-servers = [
+  "typescript-language-server",
+  "eslint",
+  "emmet-ls",
+]
+formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "javascript"
+language-servers = [
+  "typescript-language-server",
+  "tailwindcss-react",
+  "eslint",
+  "emmet-ls",
+]
+formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "json"
+language-servers = ["vscode-json-languageserver"]
+formatter = { command = 'npx', args = ["prettier", "--parser", "json"] }
+auto-format = true
+
+
+[language-server.vscode-json-languageserver]
+args = ["--stdio"]
+command = "vscode-json-languageserver"
+
+[language-server.vscode-json-languageserver.config]
+json = { validate = { enable = true }, format = { enable = true } }
+provideFormatter = true
+
+[language-server.emmet-ls]
+args = ["--stdio"]
+command = "emmet-language-server"
+
+[language-server.eslint]
+args = ["--stdio"]
+command = "eslint"
+
+[language-server.eslint.config]
+format = { enable = true }
+nodePath = ""
+quiet = false
+rulesCustomizations = []
+run = "onType"
+validate = "on"
+codeAction = { disableRuleComment = { enable = true, location = "separateLine" }, showDocumentation = { enable = false } }
+codeActionsOnSave = { mode = "all", "source.fixAll.eslint" = true }
+experimental = {}
+problems = { shortenToSingleLine = false }
+
+
+
+[[language]]
 name = "toml"
 auto-format = true
 language-servers = ["uwu_colors"]
